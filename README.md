@@ -67,9 +67,6 @@ Due to the poor accuracy of the FSR sensor in mass measurement, we trained a **M
 - Test alternative sensors for better baseline accuracy.
 - Implement real-time model updates on new data.
 
-## Contributions
-Contributions are welcome! Please submit issues or pull requests if you have ideas to improve the project.
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
