@@ -12,7 +12,7 @@ fsr_output = fsr_output.reshape(-1, 1)
 weights = weights.reshape(-1, 1)
 
 # Create polynomial features (degree 2 for quadratic regression)
-poly = PolynomialFeatures(degree=4)
+poly = PolynomialFeatures(degree=2)
 X_poly = poly.fit_transform(fsr_output)
 
 # Create and fit the model
