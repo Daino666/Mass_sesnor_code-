@@ -10,14 +10,7 @@ This repository contains the code and resources for a mass detection circuit bui
 - **FSR Sensor**: Measures the force exerted by the object.
 - **Resistors**
 
-Due to the poor accuracy of the FSR sensor in mass measurement, we trained a **Machine Learning regression model** to predict the mass from the voltage output. The model accounts for variations caused by the placement of the object on different corners of the FSR sensor.
-
-## Repository Contents
-- **`arduino_code/`**: Contains the Arduino code for reading FSR sensor data, controlling LEDs, and displaying measurements on the LCD.
-- **`ml_model/`**: Includes the machine learning regression model and training scripts.
-- **`data/`**: Dataset used for training the regression model.
-- **`plots/`**: Visualizations of the trained model's performance and accuracy.
-- **`circuit_design/`**: Diagrams of the circuit layout.
+**Due to the poor accuracy of the FSR sensor in mass measurement, we trained a **Machine Learning regression model** to predict the mass from the voltage output. The model accounts for variations caused by the placement of the object on different corners of the FSR sensor.**
 
 ## Features
 1. **LED Indicator**: Lights up to signal when the mass exceeds the maximum safe limit.
@@ -30,7 +23,7 @@ Due to the poor accuracy of the FSR sensor in mass measurement, we trained a **M
 | Component       | Quantity | Purpose                          |
 |-----------------|----------|----------------------------------|
 | Breadboard      | 1        | Circuit assembly                |
-| LEDs            | 2        | Mass range indication           |
+| LEDs            | Multiple | Mass range indication           |
 | LCD 16x2 (I2C)  | 1        | Mass display                    |
 | Arduino Uno     | 1        | Microcontroller                 |
 | FSR Sensor      | 1        | Mass measurement                |
@@ -38,13 +31,13 @@ Due to the poor accuracy of the FSR sensor in mass measurement, we trained a **M
 
 ## Setup Instructions
 1. **Hardware Setup**:
-   - Assemble the circuit as per the design diagram in `circuit_design/`.
+   - Assemble the circuit as per the design diagram.
    - Connect the FSR sensor to the analog pin of the Arduino Uno.
    - Attach the LCD display via I2C interface.
    - Wire the LEDs to digital pins for output control.
 2. **Software Setup**:
-   - Upload the Arduino code from the `arduino_code/` folder to your Arduino Uno.
-   - Train the machine learning model using the dataset in the `data/` folder.
+   - Upload the Arduino code.
+   - Train the machine learning model with the data exitsing in the repo or by makin your own data and putting it in the CSV.
    - Deploy the model for real-time corrections in mass measurement.
 
 ## Visualizations
@@ -66,7 +59,4 @@ Due to the poor accuracy of the FSR sensor in mass measurement, we trained a **M
 - Enhance the dataset to include more mass and position combinations.
 - Test alternative sensors for better baseline accuracy.
 - Implement real-time model updates on new data.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
 
