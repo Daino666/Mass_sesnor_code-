@@ -42,6 +42,7 @@ This repository contains the code and resources for a mass detection circuit bui
 
 ## Visualizations
 - **Plots of the Trained Model**:
+- ![Alt Text](Images/Figure_1.png)
   View performance metrics and accuracy plots in the `plots/` folder.
 - **Circuit Diagram**:
   Refer to the schematic in `circuit_design/` for building the circuit.
